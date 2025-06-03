@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест: Футбольные турниры 2024-2025</title>
+    <link rel="stylesheet" href="stile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="шапка">
+        <div class="контейнер">
+            <h1>Тест: Футбольные турниры 2024-2025</h1>
+            <p>Проверьте свои знания о главных футбольных событиях</p>
+        </div>
+    </header>
+
+    <main class="основной-контент">
+        <div class="контейнер">
+            <form id="футбольный-тест" class="тест-форма">
+                <div class="вопрос">
+                    <h3>1. Где пройдет финал Лиги Чемпионов 2024/2025?</h3>
+                    <label><input type="radio" name="q1" value="a"> Лондон</label>
+                    <label><input type="radio" name="q1" value="b"> Мюнхен</label>
+                    <label><input type="radio" name="q1" value="c"> Мадрид</label>
+                    <label><input type="radio" name="q1" value="d"> Париж</label>
+                </div>
+
+                <div class="вопрос">
+                    <h3>2. Сколько команд примут участие в Чемпионате мира 2026?</h3>
+                    <label><input type="radio" name="q2" value="a"> 32</label>
+                    <label><input type="radio" name="q2" value="b"> 40</label>
+                    <label><input type="radio" name="q2" value="c"> 48</label>
+                    <label><input type="radio" name="q2" value="d"> 64</label>
+                </div>
+
+                <div class="вопрос">
+                    <h3>3. В каком году впервые пройдет новый Клубный чемпионат мира с 32 командами?</h3>
+                    <label><input type="radio" name="q3" value="a"> 2024</label>
+                    <label><input type="radio" name="q3" value="b"> 2025</label>
+                    <label><input type="radio" name="q3" value="c"> 2026</label>
+                    <label><input type="radio" name="q3" value="d"> 2027</label>
+                </div>
+
+                <div class="вопрос">
+                    <h3>4. Какая страна принимала Чемпионат Европы 2024?</h3>
+                    <label><input type="radio" name="q4" value="a"> Франция</label>
+                    <label><input type="radio" name="q4" value="b"> Германия</label>
+                    <label><input type="radio" name="q4" value="c"> Англия</label>
+                    <label><input type="radio" name="q4" value="d"> Испания</label>
+                </div>
+
+                <div class="вопрос">
+                    <h3>5. Как называется награда лучшему футболисту года по версии France Football?</h3>
+                    <label><input type="radio" name="q5" value="a"> The Best FIFA</label>
+                    <label><input type="radio" name="q5" value="b"> Золотая бутса</label>
+                    <label><input type="radio" name="q5" value="c"> Золотой мяч</label>
+                    <label><input type="radio" name="q5" value="d"> Onze d'Or</label>
+                </div>
+
+                <button type="button" id="проверить" class="кнопка-тест">Проверить ответы</button>
+                <a href="index.html" class="кнопка-назад">Вернуться на главную</a>
+
+                <div id="результат" class="результат-теста"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="подвал">
+    </footer>
+
+    <!-- Рекламный блок -->
+    <div class="рекламный-блок">
+        <div class="рекламное-окно">
+            <span class="крестик">×</span>
+            <a href="https://www.fifa.com/" target="_blank">
+                <img src="мяч3.jpg" alt="Реклама">
+                <p>Специальное предложение для фанатов футбола!</p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Скрипт для теста
+        document.getElementById('проверить').addEventListener('click', function() {
+            const ответы = {
+                q1: 'b',
+                q2: 'c',
+                q3: 'b',
+                q4: 'b',
+                q5: 'c'
+            };
+
+            let баллы = 0;
+            const вопросы = document.querySelectorAll('.вопрос');
+
+            вопросы.forEach(вопрос => {
+                const выбранный = вопрос.querySelector('input:checked');
+                if (выбранный && выбранный.value === ответы[выбранный.name]) {
+                    баллы++;
+                    вопрос.style.backgroundColor = 'rgba(0, 255, 0, 0.1)';
+                } else if (выбранный) {
+                    вопрос.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+                }
+            });
+
+            const оценка = (баллы / вопросы.length) * 100;
+            let сообщение = '';
+
+            if (оценка >= 80) {
+                сообщение = `Отлично! Вы набрали ${баллы} из ${вопросы.length} (${оценка}%). Вы настоящий эксперт в футболе!`;
+            } else if (оценка >= 50) {
+                сообщение = `Хорошо! Вы набрали ${баллы} из ${вопросы.length} (${оценка}%). Но есть куда расти!`;
+            } else {
+                сообщение = `Попробуйте еще раз! Вы набрали ${баллы} из ${вопросы.length} (${оценка}%). Рекомендуем перечитать материалы.`;
+            }
+
+            document.getElementById('результат').innerHTML = `<h3>${сообщение}</h3>`;
+        });
+
+        // Скрипт для закрытия рекламы (но она не закрывается)
+        document.querySelector('.крестик').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open('https://www.fifa.com/', '_blank');
+        });
+    </script>
+</body>
+</html>

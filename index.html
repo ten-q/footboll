@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Футбольные турниры 2024-2025</title>
+    <link rel="stylesheet" href="stile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="шапка">
+        <div class="контейнер">
+            <h1>Футбольные турниры 2024-2025</h1>
+            <p>Все самые значимые соревнования мирового футбола</p>
+        </div>
+    </header>
+
+    <nav class="навигация">
+        <div class="контейнер">
+            <a href="#чемпионаты">Чемпионаты</a>
+            <a href="#кубки">Кубки</a>
+            <a href="#клубные">Клубные турниры</a>
+            <a href="#личные">Личные награды</a>
+            <a href="test.html" class="кнопка-тест">Пройти тест</a>
+        </div>
+    </nav>
+
+    <main class="основной-контент">
+        <div class="контейнер">
+            <section id="чемпионаты" class="секция">
+                <h2>Чемпионаты мира и континентов</h2>
+                <div class="грид-контейнер">
+                    <div class="грид-элемент">
+                        <img src="квалы.jpg" alt="Картинка 1">
+                        <h3>Чемпионат мира 2026 (квалификация)</h3>
+                        <p>Отборочные турниры к чемпионату мира 2026 проходят с 2024 по 2025 год. Впервые в истории в турнире примут участие 48 команд.</p>
+                    </div>
+                    <div class="грид-элемент">
+                        <img src="чм.jpg" alt="Картинка 2">
+                        <h3>Чемпионат Европы 2024</h3>
+                        <p>Финальный турнир прошёл с 14 июня по 14 июля 2024 года в Германии. 24 команды боролись за титул чемпионов Европы.</p>
+                    </div>
+                    <div class="грид-элемент">
+                        <img src="амер.jpg" alt="Картинка 3">
+                        <h3>Кубок Америки 2024</h3>
+                        <p>Турнир прошёл с 20 июня по 14 июля 2024 года в США. В нем приняли участие 16 команд из Южной и Северной Америки.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="кубки" class="секция">
+                <h2>Международные кубки</h2>
+                <div class="видео-контейнер">
+                    <iframe width="1600px" height="900px" src="лига.MP4" frameborder="0" allowfullscreen></iframe>
+                    <p>Обзор финала Лиги Наций 2024/2025</p>
+                </div>
+                <div class="текст-с-гифкой">
+                    <p>Лига Наций УЕФА 2024/2025 - третий розыгрыш турнира, который проходит среди 54 европейских сборных. Финальный турнир состоится в марте 2025 года.</p>
+                    <img src="фут.gif" alt="Гифка 1" class="гифка">
+                </div>
+            </section>
+
+            <section id="клубные" class="секция">
+                <h2>Клубные турниры</h2>
+                <div class="грид-контейнер">
+                    <div class="грид-элемент">
+                        <img src="чемп.jpg" alt="Картинка 4">
+                        <h3>Лига Чемпионов 2024/2025</h3>
+                        <p>Новый формат турнира: 36 команд в одной группе, каждый сыграет 8 матчей. Финальный матч пройдет 31 мая 2025 года в Мюнхене.</p>
+                    </div>
+                    <div class="грид-элемент">
+                        <img src="клуб.jpg" alt="Картинка 5">
+                        <h3>Клубный чемпионат мира 2025</h3>
+                        <p>В июне 2025 года в США пройдет первый клубный чемпионат мира с участием 32 команд. Это будет самый престижный клубный турнир.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="личные" class="секция">
+                <h2>Личные награды</h2>
+                <div class="список-наград">
+                    <div class="награда">
+                        <img src="мяч.jpg" alt="Картинка 6">
+                        <div>
+                            <h3>Золотой мяч 2024</h3>
+                            <p>Награда лучшему футболисту года по версии France Football. Церемония состоится в октябре 2024 года в Париже.</p>
+                        </div>
+                    </div>
+                    <div class="награда">
+                        <img src="мяч2.jpg" alt="Картинка 7">
+                        <div>
+                            <h3>The Best FIFA 2024</h3>
+                            <p>Награда лучшему футболисту по версии ФИФА. Церемония пройдет в январе 2025 года.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="подвал">
+    </footer>
+
+    <!-- Рекламный блок -->
+    <div class="рекламный-блок">
+        <div class="рекламное-окно">
+            <span class="крестик">×</span>
+            <a href="https://www.fifa.com/" target="_blank">
+                <img src="мяч3.jpg" alt="Реклама">
+                <p>Специальное предложение для фанатов футбола!</p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Скрипт для закрытия рекламы (но она не закрывается)
+        document.querySelector('.крестик').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.open('https://www.fifa.com/', '_blank');
+        });
+    </script>
+</body>
+</html>

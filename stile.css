@@ -1,0 +1,399 @@
+﻿/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    padding-bottom: 60px;
+    min-height: 100vh;
+}
+
+.контейнер {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Шапка */
+.шапка {
+    background: linear-gradient(135deg, #00b4db, #85d400);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+    .шапка h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .шапка p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+
+/* Навигация */
+.навигация {
+    background-color: #a1dc3fcc;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+    .навигация a {
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+
+        .навигация a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+.кнопка-тест {
+    background-color: #00b4dbbf;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    float: right;
+    transition: all 0.3s ease;
+}
+
+    .кнопка-тест:hover {
+        background-color: #0083b0;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+/* Основной контент */
+.основной-контент {
+    padding: 40px 0;
+}
+
+.секция {
+    margin-bottom: 50px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+    .секция:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .секция h2 {
+        color: #0083b0;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        border-bottom: 2px solid #00b4db;
+        padding-bottom: 10px;
+    }
+
+    .секция h3 {
+        color: #00b4db;
+        margin: 15px 0 10px;
+        font-size: 1.3rem;
+    }
+
+    .секция p {
+        margin-bottom: 15px;
+    }
+
+/* Грид сетка */
+.грид-контейнер {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.грид-элемент {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+    .грид-элемент:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .грид-элемент img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+/* Видео и гифки */
+.видео-контейнер {
+    margin: 15px 0;
+    position: relative;
+    padding-bottom: 20%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+    .видео-контейнер iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+.текст-с-гифкой {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.гифка {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Список наград */
+.список-наград {
+    margin-top: 20px;
+}
+
+.награда {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+    .награда:hover {
+        transform: translateX(10px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .награда img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+/* Подвал */
+.подвал {
+    background: linear-gradient(135deg, #0083b0, #a1dc3fcc);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+    .подвал p {
+        margin-bottom: 10px;
+    }
+
+/* Рекламный блок */
+.рекламный-блок {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.рекламное-окно {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    width: 250px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+    .рекламное-окно:hover {
+        transform: scale(1.05);
+    }
+
+.крестик {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+    transition: all 0.3s ease;
+}
+
+    .крестик:hover {
+        color: #ff0000;
+        transform: rotate(90deg) scale(1.2);
+    }
+
+.рекламное-окно img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.рекламное-окно p {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+/* Стили для теста */
+.тест-форма {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.вопрос {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+    .вопрос h3 {
+        margin-bottom: 10px;
+        color: #0083b0;
+    }
+
+    .вопрос label {
+        display: block;
+        margin: 8px 0;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+
+        .вопрос label:hover {
+            background-color: #e0f7fa;
+        }
+
+    .вопрос input[type="radio"] {
+        margin-right: 10px;
+    }
+
+.кнопка-назад {
+    display: inline-block;
+    background-color: #0083b0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+    .кнопка-назад:hover {
+        background-color: #00b4db;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+.результат-теста {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .шапка h1 {
+        font-size: 2rem;
+    }
+
+    .навигация {
+        text-align: center;
+    }
+
+        .навигация a {
+            display: block;
+            margin: 5px 0;
+        }
+
+    .кнопка-тест {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .грид-контейнер {
+        grid-template-columns: 1fr;
+    }
+
+    .текст-с-гифкой {
+        flex-direction: column;
+    }
+
+    .гифка {
+        width: 100%;
+    }
+
+    .награда {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .рекламное-окно {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .шапка h1 {
+        font-size: 1.8rem;
+    }
+
+    .секция {
+        padding: 20px 15px;
+    }
+
+    .рекламное-окно {
+        width: 150px;
+        padding: 10px;
+    }
+
+    .крестик {
+        font-size: 20px;
+    }
+}
